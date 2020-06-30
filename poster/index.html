@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Atmospheric Escape in AU mic b</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Sidebar -->
+			<section id="sidebar">
+				<div class="inner">
+					<nav>
+						<ul>
+							<li><a href="#intro">Abstract</a></li>
+							<li><a href="#one">Modelling</a></li>
+							<li><a href="#two">Results</a></li>
+							<li><a href="#three">More info</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Intro -->
+					<section id="intro" class="wrapper style1 fullscreen fade-up">
+						<div class="inner">
+							<h1>The dichotomy of atmospheric escape in AU mic b</h1>
+							<h3>S. Carolan, A. A. Vidotto, P. Plavchan, C. Villarreal D'Angelo, G. Hazra</h3>
+							<p><a href="https://ui.adsabs.harvard.edu/abs/2020arXiv200613606C/abstract">Here</a>, we study the dichotomy of the escaping atmosphere of the newly discovered close-in exoplanet AU Mic b. 
+								On one hand, the high EUV stellar flux is expected to cause a strong atmospheric escape in AU Mic b. 
+								On the other hand, the wind of this young star is believed to be very strong, which could reduce or even inhibit the planet's atmospheric escape. 
+								AU Mic is thought to have a wind mass-loss rate that is up to 1000 times larger than the solar wind mass-loss rate (M&#775<sub>⊙</sub>). 
+								We perform 3D hydrodynamics simulations of the stellar wind-planetary atmosphere interactions in the AU Mic system and predict the 
+								synthetic Ly-α transits of AU Mic b. We systematically vary the stellar wind mass-loss rate from a `no wind' scenario to up to a stellar wind 
+								with a mass-loss rate of 1000M&#775<sub>⊙</sub>. 
+								We find that, as the stellar wind becomes stronger, the planetary evaporation rate is reduced. 
+								With a stronger stellar wind, the atmosphere is forced to occupy a smaller volume, affecting transit signatures. 
+								Our predicted Ly-α absorption disappears from the case of "no wind" to barely any Ly-α absorption in the extreme stellar wind scenario. 
+								Future Ly-α transits could therefore place constraints not only on the evaporation rate of AU Mic b, but also on the mass-loss rate 
+								of its host star.</p>
+							<ul class="actions">
+								<li><a href="#one" class="button scrolly">Learn more</a></li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- One -->
+					<section id="one" class="wrapper style2 fade-up">
+						<div class="inner">
+							<h2>3D models of atmospheric escape</h2>
+							<a href="#" class="image left"><img src="images/rotating.gif" alt="" data-position="center center" style="width:20em; height:auto;" /></a>
+								<p>
+								We adapt SWMF's GM module to perform 3d models of AU mic b's atmospheric escape.
+								The computational grid is centred on the planet, with each hydrodynamic simulation performed in the planet's rest frame.
+								We account for the orbital effects associated with close-in exoplanets, and inject the stellar wind as an outer boundary.
+								We vary the strength of the stellar wind in each simulation from no wind to 1000 M&#775<sub>⊙</sub>, obtaining a 3d grid of densities,
+								velocities and thermal pressure.
+								</p>
+							</div>
+						
+							<div class="inner">
+								<h2>Syntheic Ly-α Transit models</h2>
+								<a href="#" class="image right"><img src="images/transiting.gif" alt="" data-position="center center" style="width:20em; height:auto;" /></a>
+								<p>To calculate the Ly-α transit profiles, we use the ray tracing technique detailed in 
+									<a href="https://ui.adsabs.harvard.edu/abs/2018MNRAS.481.5296V/abstract">Vidotto et al. (2018)</a>. 
+									Stellar rays are shot through the planetary material, which is represented by the volume entailed by the grey surface in the gif above. 
+									We calculate the velocity-dependent optical depth of this material along the line-of-sight and integrate over the all rays that are 
+									transmitted	through the atmosphere to obtain the velocity-dependent transit depth.<br><br><br><br><br><br>
+								</p>
+							</div>
+						
+					</section>
+
+				<!-- Two -->
+					<section id="two" class="wrapper style1-alt fade-up">
+						<div class="inner">
+							<h2>Results: Variation of Stellar Wind Strength</h2>
+							<a href="#" class="image main"><img src="images/six_panel.png" alt="" data-position="center center" /></a>
+							<p> 
+								We perform five simulations of AU mic b, each with a different stellar wind strength: no wind, 1, 10, 100, and 1000 M&#775<sub>⊙</sub>.
+								The orbital slice from each of these can be seen in the figure above. The bottom right panel shows the contour at 1.1 T<sub>planet</sub>. Given 
+								our simulations are isothermal, this selects the absorbing planetary material from stellar wind material.
+
+							<p>
+								We ignore the line centre [-36, 36 km/s] given it will be contaminated by interstellar aborption and geocoronal emission.
+								Below we have separated the blue and red wings of the Ly-α absorption in each of our models at mid transit.
+							</p>
+							<a href="#" class="image main"><img src="images/blue_and_red-1.png" alt="" data-position="center center" /></a>
+							<a href="#" class="image left"><img src="images/integral_split-1.png" alt="" data-position="center center" /></a>
+							<p>
+								For stellar winds &#8804 10 M&#775<sub>⊙</sub>, the blue wing shows significantly more absorption than the red wing. The stellar wind funnels day-side 
+								material towards the comet-like tail, leading to asymmetry in the line profile. 
+							</p>
+							<p>
+								For stellar winds &#8805 100 M&#775<sub>⊙</sub>, we find no significant absorption in the blue or red wing. The stellar wind is now strong enough to
+								confine the outflowing planetary material much closer to the planet, such that the volume occupied by the absorbing hydrogen is greatly reduced.
+								This leads to very little Ly-α absorption.
+							</p>
+							<p>
+								The results of this work place importance on future Ly-α observations. In the case of AU mic b, we have shown that future Ly-α observations can 
+								provide insight into the stellar wind. Should future observations yield a non-detection of AU mic b's escaping atmosphere, then we can place a 
+								lower limit on the stellar mass loss rate at 100 M&#775<sub>⊙</sub>. Should future observations find significant blue shifted absorption, we can 
+								conclude that AU mic has a mass loss rate below this value. Furthermore, we have shown that the strength of the stellar wind can significantly 
+								contributes to the resultant Ly-α line profile, and so must be considered when interpreting the Ly-α observations close-in exoplanets.
+							</p>
+						</div>
+					</section>
+
+				<!-- Three -->
+					<section id="three" class="wrapper style1 fade-up">
+						<div class="inner">
+							<h2>Further information & Contact details</h2>
+							
+							<div class="split style1">
+								<section>
+									<p>This work has been submitted the MNRAS letters, with a pre print available  
+										<a href="https://ui.adsabs.harvard.edu/abs/2020arXiv200613606C/abstract">here</a>.  
+									</p>
+									<p>
+										We acknowledge funding from the European Research 
+										Council (ERC) under the European Union's Horizon 2020 research and innovation programme (grant 817540, ASTROFLOW) and  SFI/HEA Irish 
+										Centre for High-End Computing (ICHEC) for the provision of computational facilities and support. This work used the BATS-R-US tools 
+										developed at the University of Michigan Center for Space Environment Modeling and made available through the NASA Community Coordinated
+										Modeling Center. 
+									</p>
+
+								</section>	
+								<section>
+									<ul class="contact">
+										<li>
+											<h3>Email</h3>
+											<a href="mailto:carolast@tcd.ie">carolast@tcd.ie</a>
+										</li>
+										<li>
+											<h3>Previous works</h3>
+											<a href="https://ui.adsabs.harvard.edu/search/filter_author_facet_hier_fq_author=AND&filter_author_facet_hier_fq_author=author_facet_hier%3A%221%2FCarolan%2C%20S%2FCarolan%2C%20S%22&fq=%7B!type%3Daqp%20v%3D%24fq_author%7D&fq_author=(author_facet_hier%3A%221%2FCarolan%2C%20S%2FCarolan%2C%20S%22)&q=author%3A%22Carolan%2C%20S.%22&sort=date%20desc%2C%20bibcode%20desc&p_=0">ADS</a>
+										</li>
+									</ul>
+								</section>
+							</div>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper style1-alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Stephen Carolan. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
