@@ -30,10 +30,11 @@
 						</div>
 						<nav>
 							<ul>
-								<li><a href="#About_Me">About</a></li>
-								<li><a href="#My_Research">Research</a></li>
-								<li><a href="#contact">Contact</a></li>
-								<li><a href="#CV">CV</a></li>
+								<li><a href="#Overview">Overview</a></li>
+								<li><a href="#Papers">Papers</a></li>
+								<li><a href="#Posters">Posters</a></li>
+								<li><a href="../index.html">Homepage</a></li>
+
 
 								<!--<li><a href="#elements">Elements</a></li>-->
 							</ul>
@@ -45,49 +46,84 @@
 					<div id="main">
 
 						<!-- Intro -->
-							<article id="About_Me">
+							<article id="Overview">
 								<h2 class="major">About Me</h2>
 								<span class="image main"><img src="images/magnetosphere.gif" alt="" /></span>
-								<p>Hello and welcome to my website! My name is Stephen Carolan and I am a PhD Candidate in Trinity College Dublin.</p>
-								<p>In 2018 I finished my BA Mod in Physics and Astrophysics, receiving a Gold Medal and a 1:1 degree from Trinity College Dublin (TCD) for my efforts. Since then, I began the pursuit of a PhD in Astrophysics, under the supervision of Prof. Aline Vidotto, TCD. I am currently in the second year of my PhD, researching the extreme environments of exoplanets which live close to their host stars. To read more about my field of research, click the button below!</p>
+								<p>
+									My research focuses on star-planet interactions. This includes how the Earth's magnetic field interacts with the solar wind as seen above,  
+									and how the escaping atmospheres of more extreme Hot Jupiters and Warm Neptunes interact with the winds of their host stars.
+								</p>
+								<p>
+									To investigate these interactions I use 3D magnetohydrodynamic models to simulate the local environment around a planet. Using Tecplot, a 3d visualisation
+									tool, and languages like Python and IDL, I analyse the huge datasets these models produce, gaining insights into these star-planet interactions. 
+								</p>
+								<p>
+									To read the research papers I have produced, or to take a look at some of the posters I have created for conferences, click the buttons below.
+								</p>
 								<ul class="actions fit">
-									<li><a href="#" class="button" >Home</a></li>
-									<li><a href="#My_Research" class="button" >My Research</a></li>
+									<li><a href="#Papers" class="button" >Papers</a></li>
+									<li><a href="#Posters" class="button" >Posters</a></li>
 								</ul>
 							</article>
 
 						<!-- Work -->
-							<article id="My_Research">
-								<h2 class="major">My Research</h2>
-								<span class="image main"><img src="images/EMIT.png" alt="" /></span>
-								<p>Understanding how stars and planets interact is key to understanding how planets evolve. There are many types of star-planet interactions (SPIs), with my research focusing on how material emitted from the star (the stellar wind), effects the planet. The stellar wind shapes the environment around a planet, and can both help a planet retain mass or erode a planet's atmosphere. Understanding these interactions is paramount to studying planets outside our solar system, and has huge implications on potential habitability.</p>
-								<p>In the first project of my PhD, I studied how the changing solar wind has affected the Earth. As stars evolve they gradually spin slower and slower, which changes the strength of the wind they emit. This change in the solar wind has induced a large variation in Earth's magnetosphere, which is the region around the planet which is protected by the planet's magnetic field. In this project, I used a 3D MHD code to simulate the Earth-solar wind interaction and found that Earth's magnetosphere was substantially smaller than it is today, and as our system evolve will continue to grow. For more information on this, click the link below that will bring you to my first-authored paper on this topic!</p>
-								<p>More recently, I have switched my focus towards planets outside the solar system, in particular Hot Jupiters. As the name suggests, these are Jupiter-like planets, which live close to their host stars giving them a high temperature. I am further developing an existing code to include new physics in these simulations, allowing me to employ this newly developed tool to study these planets. This code is still in development, but I am excited to share new results soon!</p>
+							<article id="Papers">
+								<h2 class="major">Papers</h2>
+								<h3 class="major">The Evolution of Earth's Magnetosphere</h3>
+								<p>
+									As the Sun evolved, the solar wind gradually became weaker and weaker. As a result, the interaction between Earth's magnetic field 
+									and the solar wind changed with time. In this work we quanitfy this wind-magnetic field interaction over the Sun's main sequence lifetime. 
+								</p>
 								<ul class="actions fit">
-									<li><a href="#" class="button" >Home</a></li>
-									<li><a href="https://ui.adsabs.harvard.edu/abs/2019MNRAS.489.5784C/abstract" class="button" >My Paper</a></li>
+									<li><a href="https://ui.adsabs.harvard.edu/abs/2019MNRAS.489.5784C/abstract" class="button" >The Evolution of Earth's Magnetosphere</a></li>
 								</ul>
+
+								<h3 class="major">The Effects of the stellar wind on Ly-alpha</h3>
+								<p>
+									Close-in exoplanets can lose their hydrogen atmospheres through hydrodynamic escape. The stellar wind, if strong enough, can confine 
+									the volume occupied by the escape atmosphere. In this work we examine the effect increasing the stellar wind strength has on the 
+									observational signatures of atmospheric escape.
+								</p>
+								<ul class="actions fit">
+									<li><a class="button" >The Effects of the stellar wind on Ly-alpha (Coming Soon)</a></li>
+								</ul>
+
+								<h3 class="major">The dichotomy of atmospheric escape in AU Mic b</h3>
+								<p>
+									AU Mic b is a newly discovered Warm Neptune orbiting with a debris disk that surrounds a young M dwarf star. On one hand, the high energy
+									flux young close in planets receive can lead to strong atmopsheric evaporation. On the other, the winds of young M dwarf stars are strong 
+									enough to confine the outflowing atmosphere. In this work we examine these two competing effects, and propose constraints on the mass loss
+									rate of AU Mic, depending on what future observations looking for atmospheric escape find. 	
+								</p>
+								<ul class="actions fit">
+									<li><a href="https://ui.adsabs.harvard.edu/abs/2020arXiv200613606C/abstract" class="button" >The dichotomy of atmospheric escape in AU Mic b</a></li>
+								</ul>
+
 							</article>
+
+							<article id="Posters">
+								<h2 class="major">Posters</h2>
+								<ul class="actions fit">
+									<li><a href="posters/EMIT_ExSS-IV.pdf" class="button" >Earth's Magnetosphere in Time - Intended for ExSS-IV</a></li>
+								</ul>
+								<ul class="actions fit">
+									<li><a href="posters/AUmicb_Exo3/index.html" class="button" >AU mic b's atmospheric Escape - Exo 3 Online</a></li>
+								</ul>
+								
+							</article>
+
 
 						<!-- Contact -->
 							<article id="contact">
 								<h2 class="major">Contact</h2>
-								<p>Feel free to send me an email at carolast@tcd.ie, or a message on one of the platforms below!</p>
+								<p>Feel free to send me an email at <a href="mailto:carolast@tcd.ie">carolast@tcd.ie</a>, or a message on one of the platforms below!</p>
 								<ul class="icons">
 									<li><a href="mailto:carolast@tcd.ie" class="icon fa-envelope"><span class="label">Email</span></a></li>
 									<li><a href="https://www.linkedin.com/in/stephendcarolan/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
 									<li><a href="https://github.com/StephenCarolan/" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 								</ul>
-								<ul class="actions fit">
-									<li><a href="#" class="button" >Home</a></li>
-								</ul>
 							</article>
 
-							<article id="CV">
-								<h2 class="major">CV</h2>
-								<p>Coming soon....</p>
-								<p> <a href="poster/index.html">TEST</a></p>
-							</article>
 
 						<!-- Elements -->
 							<article id="elements">
