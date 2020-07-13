@@ -1,3 +1,12 @@
+AUTHOR: Stephen Carolan
+TITLE:stephencarolan.github.io - Personal Webpage
+
+DESCRIPTION:
+This is my personal webpage, built using a template from HTML5up (see below for template details/credit)
+
+I use this page to host my online CV & portfolio of posters/figures for conferences/online access.
+
+--------------------------------------------------------------------------------------------------------------------------------------------
 Prologue by HTML5 UP
 html5up.net | @ajlkn
 Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
