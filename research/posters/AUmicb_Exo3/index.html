@@ -144,13 +144,14 @@
           <div class="span4">
             <a href="https://stephencarolan.github.io/research/posters/AUmicb_Exo3/images/rotating.gif" ><img src="https://stephencarolan.github.io/research/posters/AUmicb_Exo3/images/rotating.gif" alt="" class="img-responsive left" style="float:left"></a>
             <p>
-              <i>Figure 1: A 3D view of the planet, seen in red. The grey streamlines trace the flow of the stellar wind, while the black trace the flow of the
+              <i>Figure 1: A 3D view of the planet, seen in red. The grey streamlines trace the flow of the stellar wind, while the black trace the
                   planetary outflow. The color shows the density in the orbital plane.
                 </i>
                 <br><br>
                 We adapt SWMF's GM module to perform 3D models of AU Mic b's atmospheric escape.
                 The computational grid is centred on the planet, with each hydrodynamic simulation performed in the planet's rest frame.
                 We account for the orbital effects associated with close-in exoplanets, and inject the stellar wind as an outer boundary.
+                These simulations are isothermal, so the planetary and stellar material can be distinguished by temperature.
                 We vary the strength of the stellar wind in each simulation from no wind to 1000 M&#775<sub>⊙</sub>, obtaining a 3d grid of densities,
                 velocities and thermal pressure.
               </p>
@@ -164,12 +165,13 @@
             <p>
               To calculate the Ly-α transit profiles, we use the ray tracing technique detailed in 
               <a href="https://ui.adsabs.harvard.edu/abs/2018MNRAS.481.5296V/abstract">Vidotto et al. (2018)</a>. 
-              Stellar rays are shot through the planetary material, which is represented by the volume entailed by the grey surface in the gif above. 
-              We calculate the velocity-dependent optical depth of this material along the line-of-sight and integrate over the all rays that are 
+              Stellar rays are shot through the planetary material, which is represented by the volume entailed by the grey surface in figure 1. 
+              We calculate the velocity-dependent optical depth of this material along the line-of-sight (seen in figure 2) and integrate over all rays that are 
               transmitted	through the atmosphere to obtain the velocity-dependent transit depth.<br><br>
               <i>
                 Figure 2: The synthetic transit of the 100 M&#775<sub>⊙</sub> model. The filled black circle represents the planet
-                while the yellow outline shows the star. The color shows the optical depth of absorbing material around the planet.
+                while the yellow outline shows the star. The color shows the optical depth of absorbing material around the planet,
+                along a line of sight.
               </i>
             </p>
           </div>
@@ -184,12 +186,12 @@
           <p> 
             <i>
               Figure 3: The orbital plane in each of our models. The color shows the density in the orbital plane, which the streamlines trace the flow of material.
-              The contours in the bottom right panel outline the volume occupied by the absorbing material.
+              The contours in the bottom right panel outline the volume occupied by the absorbing material, corresponding to the grey surface in figure 1.
             </i>	
             <br><br>
             We perform five simulations of AU Mic b, each with a different stellar wind strength: no wind, 1, 10, 100, and 1000 M&#775<sub>⊙</sub>.
             The orbital slice from each of these can be seen in the figure above. The bottom right panel shows the region containing absorbing material. It is clear
-            that as the stellar wind strength is increased the aobsorbing material is confined closer to the planet.
+            that as the stellar wind strength is increased the absorbing material is confined closer to the planet.
           </p>
           <p>
             Eventually, this confinement affects the sonic surface of the outflowing atmosphere, such that material on the day-side no longer accelerates to super-sonic 
@@ -198,7 +200,7 @@
           <h1>Observational Signatures</h1>
           <p>
             Given that the absorbing planetary material now occupies a smaller volume around the planet, and the atmospheric escape rate has been reduced, 
-            changes in the Ly-α absorption are to be expected. We perform synthetic Ly-α transit calculations on each of our 3d grids obtaining the Ly-α
+            changes in the Ly-α absorption are to be expected. We perform synthetic Ly-α transit calculations on each of our 3D grids obtaining the Ly-α
             line profiles at mid transit. We ignore the line centre [-36, 36 km/s] given it will be contaminated by interstellar aborption and geocoronal emission,
             and plot the blue and red wings for each model below.
           </p>
@@ -213,7 +215,7 @@
           </p>
           <a href="https://stephencarolan.github.io/research/posters/AUmicb_Exo3/images/integral_split-1.png" ><img src="https://stephencarolan.github.io/research/posters/AUmicb_Exo3/images/integral_split-1.png" alt="" class="img-responsive" style="float: right;max-height:35em"></a>
           <p>
-            We integrate the red and blue wings of each Ly-α line profile, obtaining the percentage absorption of each of each wing. The resultant values can 
+            We integrate the red and blue wings of each Ly-α line profile, obtaining the percentage absorption of each wing. The resultant values can 
             be seen in the figure to the left. This allows us to quantify the line asymmetry of the Ly-α line for each stellar wind strength.
           </p>
           <p>
@@ -243,7 +245,7 @@
             <li>
                 We find that as the stellar wind strength is increased the mass loss rate of the planet decreases.
                 This is due to the interaction between the stellar and planetary material, which does not allow the day-side 
-                outflow to reach super-sonic speeds. 
+                outflow to reach super-sonic speeds when the stellar wind is strong.
             </li>
             <li>
                 We find that this decreased escape rate and confinement of planetary material affects the Ly-α absorption, as the absorbing
