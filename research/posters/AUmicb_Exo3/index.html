@@ -57,16 +57,35 @@
           .left{
             margin-right: 10px;
             margin-left: 0px;
+            float: left;
           }
           .right{
             margin-right: 0px;
             margin-left: 10px;
-          }          
+            float: right;
+
+          }  
+          @media screen and (max-width: 1199px) {
+            .left {
+              float: none;
+              display: block;
+              margin-left:auto;
+              margin-right:auto;
+            }
+            .right {
+              float:none;
+              display: block;
+              margin-left:auto;
+              margin-right:auto;
+            }
+          }
           .span4 p {
             font-size: large;
           }
           .span4 ul {
             font-size: large;
+            padding-left:1.2em;
+            overflow: hidden;
           }
           .span4 i {
             font-size: medium;
@@ -83,6 +102,13 @@
           }
           .page-header h1{
               font-size: 4em;
+          }
+          .highlighttext {
+            background-color:#7d7d7d;
+            color: white;
+            padding: 1.2em;
+            border-radius: 4px;
+            overflow: hidden;
           }
     </style>
    
@@ -120,90 +146,86 @@
       <div id="abstract" class="jumbotron">
         <h1>The Dichotomy of Atmospheric Escape in AU Mic b</h1>
         <h3><u><b><a href="mailto:carolast@tcd.ie">S. Carolan</a></b></u>, A. A. Vidotto, P. Plavchan, C. Villarreal D'Angelo, G. Hazra</h3>
+
+        <h3><u>Background</u></h3>
         <p>     
           The large high-energy flux young close-in planets receive from their host stars can lead to strong atmospheric evaporation. For these planets, 
           their atmospheres take the form of dense photoevaporative hydrogen outflows, which expand into the winds of their host stars. The stellar wind exerts 
           pressure in the expanding planetary atmosphere and, if sufficiently strong, it can affect planetary atmospheric escape rates and spectroscopic transit 
-          signatures. <a href="https://ui.adsabs.harvard.edu/abs/2020arXiv200613606C/abstract"><u>Here</u></a>, we study the dichotomy of the escaping atmosphere of the newly discovered close-in exoplanet AU Mic b. On one hand, the high EUV stellar 
+          signatures. 
+        </p>
+
+        <h3><u>What is special about AU mic b?</u></h3>
+        <p>     
+          <a href="https://ui.adsabs.harvard.edu/abs/2020arXiv200613606C/abstract"><u>Here</u></a>, we study the dichotomy of the escaping atmosphere of the newly discovered close-in exoplanet AU Mic b. On one hand, the high EUV stellar 
           flux is expected to cause a strong atmospheric escape in AU Mic b. On the other hand, the wind of this young star is believed to be very strong, which could 
           reduce or even inhibit the planet's atmospheric escape. AU Mic is thought to have a wind mass-loss rate that is up to 1000 times larger than the solar wind 
-          mass-loss rate. Through 3D hydrodynamics simulations, we show that, as the stellar wind becomes stronger, the evaporation rate of AU Mic b is reduced and its 
-          atmosphere is forced to occupy a smaller volume. This affects Ly-α transit signatures, which is reduced from 20% in the case of no wind interaction to barely 
-          any absorption in the extreme stellar wind scenario. Future Ly-α transits could therefore place constraints not only on the evaporation rate of AU Mic b, but 
-          also on the mass-loss rate of its host star.
-
+          mass-loss rate. 
         </p>
+
       </div>
-
-
 
       <section id="model">
         <div class="page-header"><h1>Modelling</h1></div>
         <h1>3D Models of Atmospheric Escape</h1>
         <div class="row">
           <div class="span4">
-            <a href="https://stephencarolan.github.io/research/posters/AUmicb_Exo3/images/rotating.gif" ><img src="https://stephencarolan.github.io/research/posters/AUmicb_Exo3/images/rotating.gif" alt="" class="img-responsive left" style="float:left"></a>
+            <a href="https://stephencarolan.github.io/research/posters/AUmicb_Exo3/images/rotating.gif" ><img src="https://stephencarolan.github.io/research/posters/AUmicb_Exo3/images/rotating.gif" alt="" class="img-responsive left"></a>
             <p>
               <i>Figure 1: A 3D view of the planet, seen in red. The grey streamlines trace the flow of the stellar wind, while the black trace the
                   planetary outflow. The color shows the density in the orbital plane.
                 </i>
-                <br><br>
-                We adapt SWMF's GM module to perform 3D models of AU Mic b's atmospheric escape.
-                The computational grid is centred on the planet, with each hydrodynamic simulation performed in the planet's rest frame.
-                We account for the orbital effects associated with close-in exoplanets, and inject the stellar wind as an outer boundary.
-                These simulations are isothermal, so the planetary and stellar material can be distinguished by temperature.
-                We vary the strength of the stellar wind in each simulation from no wind to 1000 M&#775<sub>⊙</sub>, obtaining a 3d grid of densities,
-                velocities and thermal pressure.
-              </p>
+            </p>
+            <ul>
+              <li >We perform 3d hydrodynamic models of AU mic b's atmospheric escape by varying the strenght of the stellar wind in each
+                simulation from no wind to 1000 times solar mass loss rate (M&#775<sub>⊙</sub>).<br><br>
+              </li>
+              <li>The output of our simulations are used to compute synthetic lyman alpha transit line profiles at mid transit.</li>
+
+            </ul> 
+
           </div>
        </div>
        
-       <h1>Syntheic Ly-α Transit Models</h1>
-        <div class="row">
-          <div class="span4">
-            <a href="https://stephencarolan.github.io/research/posters/AUmicb_Exo3/images/transiting.gif" ><img src="https://stephencarolan.github.io/research/posters/AUmicb_Exo3/images/transiting.gif" alt="" class="img-responsive right" style="float:right"></a>
-            <p>
-              To calculate the Ly-α transit profiles, we use the ray tracing technique detailed in 
-              <a href="https://ui.adsabs.harvard.edu/abs/2018MNRAS.481.5296V/abstract">Vidotto et al. (2018)</a>. 
-              Stellar rays are shot through the planetary material, which is represented by the volume entailed by the grey surface in figure 1. 
-              We calculate the velocity-dependent optical depth of this material along the line-of-sight (seen in figure 2) and integrate over all rays that are 
-              transmitted	through the atmosphere to obtain the velocity-dependent transit depth.<br><br>
-              <i>
-                Figure 2: The synthetic transit of the 100 M&#775<sub>⊙</sub> model. The filled black circle represents the planet
-                while the yellow outline shows the star. The color shows the optical depth of absorbing material around the planet,
-                along a line of sight.
-              </i>
-            </p>
-          </div>
-        </div>
       </section>
 
       <section id="results">
         <div class="page-header"><h1>Results</h1></div>
         <div class="span4">
+          
+          
           <h1>Variation of Stellar Wind Strength</h1>
           <a href="https://stephencarolan.github.io/research/posters/AUmicb_Exo3/images/six_panel.png" ><img src="https://stephencarolan.github.io/research/posters/AUmicb_Exo3/images/six_panel.png" alt="" data-position="center center" class="img-responsive"/></a>
           <p> 
             <i>
               Figure 3: The orbital plane in each of our models. The color shows the density in the orbital plane, which the streamlines trace the flow of material.
               The contours in the bottom right panel outline the volume occupied by the absorbing material, corresponding to the grey surface in figure 1.
-            </i>	
-            <br><br>
+            </i>
+          </p>
+          <ul>
+            <li>
             We perform five simulations of AU Mic b, each with a different stellar wind strength: no wind, 1, 10, 100, and 1000 M&#775<sub>⊙</sub>.
             The orbital slice from each of these can be seen in the figure above. The bottom right panel shows the region containing absorbing material. It is clear
-            that as the stellar wind strength is increased the absorbing material is confined closer to the planet.
-          </p>
-          <p>
-            Eventually, this confinement affects the sonic surface of the outflowing atmosphere, such that material on the day-side no longer accelerates to super-sonic 
-            speeds. It is instead funneled towards the comet-like tail. This causes a reducing escape rate as the stellar wind strength is increased.
-          </p><br/>
+            that as the stellar wind strength is increased the absorbing material is confined closer to the planet.<br><br>
+            </li>
+            <li>
+              Eventually, this confinement affects the sonic surface of the outflowing atmosphere, such that material on the day-side no longer accelerates to super-sonic 
+              speeds. It is instead funneled towards the comet-like tail. This causes a reducing escape rate as the stellar wind strength is increased.
+            </li>
+          </ul>
+
+
+
           <h1>Observational Signatures</h1>
-          <p>
-            Given that the absorbing planetary material now occupies a smaller volume around the planet, and the atmospheric escape rate has been reduced, 
-            changes in the Ly-α absorption are to be expected. We perform synthetic Ly-α transit calculations on each of our 3D grids obtaining the Ly-α
-            line profiles at mid transit. We ignore the line centre [-36, 36 km/s] given it will be contaminated by interstellar aborption and geocoronal emission,
-            and plot the blue and red wings for each model below.
-          </p>
+          <ul>
+            <li>
+              Given that the absorbing planetary material now occupies a smaller volume around the planet, and the atmospheric escape rate has been reduced, 
+              changes in the Ly-α absorption are to be expected. We perform synthetic Ly-α transit calculations on each of our 3D grids obtaining the Ly-α
+              line profiles at mid transit. We ignore the line centre [-36, 36 km/s] given it will be contaminated by interstellar aborption and geocoronal emission,
+              and plot the blue and red wings for each model below.
+            </li>
+          </ul>
+
           <div class="text-center">
             <a href="https://stephencarolan.github.io/research/posters/AUmicb_Exo3/images/blue_and_red-1.png"><img src="https://stephencarolan.github.io/research/posters/AUmicb_Exo3/images/blue_and_red-1.png" alt="" data-position="center center" class="img-responsive" ></a>
           </div>
@@ -213,27 +235,24 @@
               absorption. (c) The percentage absorption of the blue (diamonds) and red (circles) wings in each of our models.
             </i>
           </p>
-          <a href="https://stephencarolan.github.io/research/posters/AUmicb_Exo3/images/integral_split-1.png" ><img src="https://stephencarolan.github.io/research/posters/AUmicb_Exo3/images/integral_split-1.png" alt="" class="img-responsive" style="float: right;max-height:35em"></a>
-          <p>
-            We integrate the red and blue wings of each Ly-α line profile, obtaining the percentage absorption of each wing. The resultant values can 
-            be seen in the figure to the left. This allows us to quantify the line asymmetry of the Ly-α line for each stellar wind strength.
-          </p>
-          <p>
+          <a href="https://stephencarolan.github.io/research/posters/AUmicb_Exo3/images/integral_split-1.png" ><img src="https://stephencarolan.github.io/research/posters/AUmicb_Exo3/images/integral_split-1.png" alt="" class="img-responsive right" style="max-height:35em"></a>
+
+          <ul>
+            <li>
+              We integrate the red and blue wings of each Ly-α line profile, obtaining the percentage absorption of each wing. The resultant values can 
+              be seen in the figure to the left. This allows us to quantify the line asymmetry of the Ly-α line for each stellar wind strength.
+            </li>
+          </ul>
+          <p class="highlighttext">
             For stellar winds &#8804 10 M&#775<sub>⊙</sub>, the blue wing shows significantly more absorption than the red wing. The stellar wind funnels day-side 
             material towards the comet-like tail, leading to asymmetry in the line profile. 
           </p>
-          <p>
+          <p class="highlighttext">
             For stellar winds &#8805 100 M&#775<sub>⊙</sub>, we find no significant absorption in the blue or red wing. The stellar wind is now strong enough to
             confine the outflowing planetary material much closer to the planet, such that the volume occupied by the absorbing hydrogen is greatly reduced.
             This leads to very little Ly-α absorption.
           </p>
-          <p>
-            The results of this work place importance on future Ly-α observations. In the case of AU Mic b, we have shown that future Ly-α observations can 
-            provide insight into the stellar wind. Should future observations yield a non-detection of AU Mic b's escaping atmosphere, then we can place a 
-            lower limit on the stellar mass loss rate at 100 M&#775<sub>⊙</sub>. Should future observations find significant blue shifted absorption, we can 
-            conclude that AU Mic has a mass loss rate below this value. Furthermore, we have shown that the strength of the stellar wind can significantly 
-            contributes to the resultant Ly-α line profile, and so must be considered when interpreting the Ly-α observations close-in exoplanets.
-          </p>
+          
         </div>
       </section>
     
@@ -245,11 +264,11 @@
             <li>
                 We find that as the stellar wind strength is increased the mass loss rate of the planet decreases.
                 This is due to the interaction between the stellar and planetary material, which does not allow the day-side 
-                outflow to reach super-sonic speeds when the stellar wind is strong.
+                outflow to reach super-sonic speeds when the stellar wind is strong.<br><br>
             </li>
             <li>
                 We find that this decreased escape rate and confinement of planetary material affects the Ly-α absorption, as the absorbing
-                material now occupies a lower volume.
+                material now occupies a lower volume.<br><br>
             </li>
             <li>
                 This places further importance on follow up observations of AU Mic b in Ly-α, as they may allow for a constraint to be placed
@@ -264,7 +283,7 @@
       <section id="moreinfo">
         <div class="page-header"><h1>Further Information</h1></div>
         <div class="span4">
-          <p>This work has been submitted the MNRAS letters, with a pre print available  
+          <p>This work has been accepted for publiation in MNRAS letters, and can be found on arXiv  
             <a href="https://ui.adsabs.harvard.edu/abs/2020arXiv200613606C/abstract">here</a>.  
           </p>
           <p>
@@ -272,7 +291,7 @@
             Council (ERC) under the European Union's Horizon 2020 research and innovation programme (grant 817540, ASTROFLOW) and  SFI/HEA Irish 
             Centre for High-End Computing (ICHEC) for the provision of computational facilities and support. This work used the BATS-R-US tools 
             developed at the University of Michigan Center for Space Environment Modeling and made available through the NASA Community Coordinated
-            Modeling Center. <br><br><br>
+            Modeling Center. 
           </p>
           <div class="row">
               <p>
@@ -281,8 +300,11 @@
               </p>    
               <p>
                 <strong>Previous works:</strong>
-                
                 <a href="https://ui.adsabs.harvard.edu/search/filter_author_facet_hier_fq_author=AND&filter_author_facet_hier_fq_author=author_facet_hier%3A%221%2FCarolan%2C%20S%2FCarolan%2C%20S%22&fq=%7B!type%3Daqp%20v%3D%24fq_author%7D&fq_author=(author_facet_hier%3A%221%2FCarolan%2C%20S%2FCarolan%2C%20S%22)&q=author%3A%22Carolan%2C%20S.%22&sort=date%20desc%2C%20bibcode%20desc&p_=0">ADS</a>
+              </p>
+              <p>
+                <strong>Website:</strong>
+                <a href="https://stephencarolan.github.io">stephencarolan.github.io</a>
               </p>
           </div>
           <div class="row">
